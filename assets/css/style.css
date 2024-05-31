@@ -6886,8 +6886,7 @@ del {
     background-position: right bottom, left top;
     background-repeat: no-repeat, repeat;
     background-size: cover;
-    position: relative;
-    /* Add position property with relative value */
+
 }
 
 .im2 {
