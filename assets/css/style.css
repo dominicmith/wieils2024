@@ -6877,29 +6877,6 @@ del {
     width: auto;
 }
 
-.nav2forimages {
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-around;
-    padding: 12px;
-    background-image: url(/assets/img/hero/WIEILS.jpg), url(/assets/img/hero/WIEILS.jpg);
-    background-position: right bottom, left top;
-    background-repeat: no-repeat, repeat;
-    background-size: cover;
-
-}
-
-.im2 {
-    display: flex;
-    padding: 0;
-    justify-content: center;
-    background-image: none;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
 .nav-manus {
     display: flex;
     justify-content: space-between;
