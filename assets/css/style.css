@@ -6899,6 +6899,18 @@ del {
     background-size: cover;
 }
 
+.nav2forimages {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
 
 .nav-manus {
     display: flex;
