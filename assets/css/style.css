@@ -6893,10 +6893,13 @@ del {
 .im2 {
     display: flex;
     padding: 0;
-    justify-items: legacy;
-    background-image: url(/assets/img/hero/WIEILS.jpg);
-
+    justify-content: center;
+    background-image: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 
 .nav-manus {
     display: flex;
