@@ -6890,13 +6890,11 @@ del {
     /* Add position property with relative value */
 }
 
-
-
 .im2 {
     display: flex;
     padding: 0;
     justify-items: legacy;
-    background-image: url("");
+    background-image: url(/assets/img/hero/WIEILS.jpg);
 
 }
 
