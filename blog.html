@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
-    <!--? Preloader Start -->
+    <!-- ? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
@@ -34,15 +34,18 @@
             </div>
         </div>
     </div>
-    <!-- Preloader Start -->
+    <!-- Top bar -->
     <header>
-
         <div class="headerno1">
             <div style="display: flex;">
-            <div class="padit"><a href="https://ieee.socet.edu.in/">IEEE SOU SB</a></div>
-            <div class="padit"><a href="https://www.silveroakuni.ac.in/">Silver Oak University</a></div>
+                <div class="padit"><a href="https://ieee.socet.edu.in/">IEEE.org</a></div>
+                <div class="padit"><a href="https://www.silveroakuni.ac.in/">IEEE <i>Xplore</i> Digital Library</a>
+                </div>
+                <div class="padit"><a href="https://wie.ieee.org/">IEEE Standards</a></div>
+                <div class="padit"><a href="https://wie.ieee.org/">IEEE Spectrum</a></div>
+                <div class="padit"><a href="https://wie.ieee.org/">More Sites</a></div>
             </div>
-            <div style="display: flex;">
+            <!-- <div style="display: flex;">
                 <div class="padit">
                     <li><a href="https://www.facebook.com/IEEESilverOakUni/"><i class="fab fa-facebook-f"></i></a></li>
                 </div>
@@ -50,92 +53,111 @@
                     <li><a href="https://www.instagram.com/ieee_silveroakuni/"><i class="fab fa-instagram"></i></a></li>
                 </div>
                 <div class="padit">
-                    <li><a href="https://www.youtube.com/channel/UC09ml-6jftXhauyPGDccWWg"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC09ml-6jftXhauyPGDccWWg"><i
+                                class="fab fa-youtube"></i></a></li>
                 </div>
             </div>
             <div>
-                <img src="https://ieeewie.wpenginepowered.com/wp-content/uploads/IEEE-Logo-wht-250-200x59.png" id="ieee-logo-from-website">
-            </div>
+                <img src="https://ieeewie.wpenginepowered.com/wp-content/uploads/IEEE-Logo-wht-250-200x59.png"
+                    id="ieee-logo-from-website">
+            </div> -->
         </div>
 
         <div class="nav2forimages">
-            
+
             <img src="./assets/img/hero/logo2.png" aria-disabled="true" height="120px" width="auto">
-            
+
+            <div>
+                <img src="./assets/img/logo/ieee mb blue.png" id="ieee-logo-from-website" style="width: 100%;">
+            </div>
+
         </div>
 
-        <nav class="nav-manus" style="background-color: #742F8A;">
-            <div class="" style="padding-left: 300px;"></div>
-            <div class="paditmorehe"><a href="index.html">Home</a></div>
-            <div class="paditmorehe"><a href="about.html">About US</a></div>
-            <div class="paditmorehe"><a href="spakers.html">About the Speakers</a></div>
-            <!-- Schedule Dropdown -->
-            <div class="paditmorehe dropdown">
-                <a href="#" class="dropbtn">Schedule</a>
-                <div class="dropdown-content">
-                    <a href="#">Day 1</a>
-                    <a href="#">Day 2</a>
-                    <a href="#">Day 3</a>
-                </div>
+
+
+
+        <nav class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">
+                &#9776;
             </div>
-            <div class="paditmorehe"><a href="contact.html">Contact</a></div>
-            <div class="paditmorehe"><a href="#">Sponsors</a></div>
-        
-            <div>
-                <div class="paditmorehe" style="background-color: #742F8A; color: white;">
-                    <a href="#" style="color: white; font-size: 15px;">Register Now</a>
+            <div class="nav-links" id="navLinks">
+                <div><a href="index.html">Home</a></div>
+                <div><a href="about.html">About Us</a></div>
+                <div><a href="spakers.html">About the Speakers</a></div>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Schedule</a>
+                    <div class="dropdown-content">
+                        <a href="#">Day 1</a>
+                        <a href="#">Day 2</a>
+                    </div>
                 </div>
+                <div><a href="contact.html">Contact</a></div>
+                <div><a href="#">Sponsors</a></div>
+                <div class="register"><a href="#">Register Now</a></div>
             </div>
-            <div class="" style="padding-right: 300px;"></div>
         </nav>
+
+        <script>
+            function toggleMenu() {
+                const navLinks = document.getElementById('navLinks');
+                navLinks.classList.toggle('active');
+            }
+
+            document.querySelectorAll('.dropbtn').forEach(btn => {
+                btn.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const dropdownContent = btn.nextElementSibling;
+                    dropdownContent.classList.toggle('show');
+                });
+            });
+        </script>
 
         <style>
             /* Dropdown button */
-                .dropbtn {
-                    color: white;
-                    font-size: 15px;
-                    background-color: inherit;
-                    border: none;
-                }
+            .dropbtn {
+                color: white;
+                font-size: 15px;
+                background-color: inherit;
+                border: none;
+            }
 
-                /* Dropdown container */
-                .dropdown {
-                    position: relative;
-                    display: inline-block;
-                }
+            /* Dropdown container */
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
 
-                /* Dropdown content (hidden by default) */
-                .dropdown-content {
-                    display: none;
-                    position: absolute;
-                    background-color: #742F8A;
-                    min-width: 160px;
-                    z-index: 1;
-                }
+            /* Dropdown content (hidden by default) */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #742F8A;
+                min-width: 160px;
+                z-index: 1;
+            }
 
-                /* Links inside the dropdown */
-                .dropdown-content a {
-                    color: white;
-                    padding: 12px 16px;
-                    text-decoration: none;
-                    display: block;
-                }
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                color: white;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
 
-                /* Change color of dropdown links on hover */
-                .dropdown-content a:hover {
-                    background-color: #ddd;
-                }
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
 
-                /* Show the dropdown menu on hover */
-                .dropdown:hover .dropdown-content {
-                    display: block;
-                }
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
 
-                /* Change the background color of the dropdown button when the dropdown content is shown */
-                .dropdown:hover .dropbtn {
-                    background-color: #742F8A;
-                }
-
+            /* Change the background color of the dropdown button when the dropdown content is shown */
+            .dropdown:hover .dropbtn {
+                background-color: #742F8A;
+            }
         </style>
 
 
@@ -143,63 +165,13 @@
         <nav class="nav-manus-a" style="background-color: #742F8A;">
 
         </nav>
-
-
-        <!--? Header Start -->
-        <!-- <div class="header-area">
-            <div class="main-header header-sticky">
-                <div class="container-fluid">
-                    <div class="row align-items-center"> -->
-                             <!-- Logo -->
-                        <!-- <div class="col-xl-2 col-lg-2 col-md-1">
-                            <div class="logo">
-                                <a href="index.html"><img style="height: 55px;"
-                                        src="http://ieee.socet.edu.in/wp-content/uploads/2024/03/WIE_logo_purple_RGB_300.jpg"
-                                        alt="Logo"></a>
-                                </div>
-                       </div> -->
-
-                        <!-- <div class="col-xl-10 col-lg-10 col-md-10">
-                            <div class="menu-main d-flex align-items-center justify-content-end"> -->
-                                <!-- Main-menu -->
-                                <!-- <div class="main-menu f-right d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a href="index.html">Home</a></li> -->
-                                            <!--<li><a href="#">About</a></li>
-                                            <li><a href="#">GUESTS</a></li>-->
-                                            <!-- <li><a href="about.html">Tracks & Speakers</a></li>
-                                            <li><a href="spakers.html">Committee</a></li>
-                                            <li><a href="schedule.html">Registration</a></li>
-                                            <li><a href="blog.html">Schedule</a>
-                                            <li><a href="#">Venue</a></li>
-                                            <li><a href="#">Panel Discussion</a></li>
-                                            <li><a href="#">Sponsors</a></li>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog_details.html">Blog Details</a></li>
-                                                    <li><a href="elements.html">Element</a></li>
-                                                </ul>  
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><div class="header-right-btn f-right d-none d-lg-block ml-30">
-                                                <a href="#" class="btn header-btn">Register Now</a>
-                                            </div></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                                
-                            </div>
-                        </div> -->
-
-
-                        <!-- Mobile Menu -->
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Mobile Menu -->
+        <div class="col-12">
+            <div class="mobile_menu d-block d-lg-none"></div>
+        </div>
+        </div>
+        </div>
+        </div>
         </div>
         <!-- Header End -->
     </header>
